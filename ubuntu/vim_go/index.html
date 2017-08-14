@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>polariseye</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="/css/hugo-bootswatch.css">
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">polariseye</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+           <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="sections">Sections<span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="download">
+              
+                <li><a href="/"></a></li>
+              
+                <li><a href="/text">text</a></li>
+              
+                <li><a href="/ubuntu">ubuntu</a></li>
+              
+              </ul>
+            </li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+        <h1><a href="https://polariseye.github.io/ubuntu/vim_go/"></a></h1>
+        <span class="lead">Mon, Jan 1, 0001</span>
+        <div class="post">
+            
+
+<h2 id="vim搭建go打开发环境">vim搭建go打开发环境</h2>
+
+<p>安装go打vim插件，具体步骤如下：</p>
+
+<ol>
+<li>安装vim插件管理工具</li>
+<li>安装go的vim插件</li>
+<li>安装相关具体插件</li>
+</ol>
+
+<h2 id="安装vim插件管理工具">安装vim插件管理工具</h2>
+
+<p>网上有很多vim插件管理工具，由于第一个接触到的是Vundle，所以我选则安装Vundle</p>
+
+<pre><code>git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+</code></pre>
+
+<p>完成后，调整vim配置：修改~/.vim/.vimrc (如果不存在此文件，则创建)，具体增加以下内容：</p>
+
+<pre><code>&quot; -------------  
+&quot; Vundle  
+&quot; https://github.com/gmarik/Vundle.vim  
+&quot; -------------  
+  
+set nocompatible              &quot; be iMproved, required  
+filetype off                  &quot; required  
+  
+&quot; set the runtime path to include Vundle and initialize  
+set rtp+=~/.vim/bundle/Vundle.vim  
+call vundle#begin()  
+&quot; alternatively, pass a path where Vundle should install plugins  
+&quot;call vundle#begin('~/some/path/here')  
+  
+&quot; let Vundle manage Vundle, required  
+Plugin 'gmarik/Vundle.vim'  
+  
+&quot; The following are examples of different formats supported.  
+&quot; Keep Plugin commands between vundle#begin/end.  
+&quot; plugin on GitHub repo  
+&quot;&quot;Plugin 'tpope/vim-fugitive'  
+&quot; plugin from http://vim-scripts.org/vim/scripts.html  
+&quot;&quot;Plugin 'L9'  
+&quot; Git plugin not hosted on GitHub  
+&quot;&quot;Plugin 'git://git.wincent.com/command-t.git'  
+&quot; git repos on your local machine (i.e. when working on your own plugin)  
+&quot;&quot;Plugin 'file:///home/gmarik/path/to/plugin'  
+&quot; The sparkup vim script is in a subdirectory of this repo called vim.  
+&quot; Pass the path to set the runtimepath properly.  
+&quot;&quot;Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}  
+&quot; Avoid a name conflict with L9  
+&quot;&quot;Plugin 'user/L9', {'name': 'newL9'}  
+  
+&quot; Install Vim-go  
+Plugin 'fatih/vim-go'  
+  
+&quot; All of your Plugins must be added before the following line  
+call vundle#end()            &quot; required  
+filetype plugin indent on    &quot; required  
+&quot; To ignore plugin indent changes, instead use:  
+&quot;filetype plugin on  
+&quot;  
+&quot; Brief help  
+&quot; :PluginList       - lists configured plugins  
+&quot; :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate  
+&quot; :PluginSearch foo - searches for foo; append `!` to refresh local cache  
+&quot; :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal  
+&quot;  
+&quot; see :h vundle for more details or wiki for FAQ  
+&quot; Put your non-Plugin stuff after this line 
+</code></pre>
+
+<h2 id="安装go打vim插件">安装go打vim插件</h2>
+
+<p>执行以下命令</p>
+
+<pre><code>git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
+</code></pre>
+
+<p>然后确保<code>~/.vim/.vimrc</code> 文件包含<code>Plugin 'fatih/vim-go'</code></p>
+
+<h2 id="配置具体的相关工具">配置具体的相关工具</h2>
+
+<p>打开vim，在命令模式下，输入：<code>GoInstallBinaries</code>,等待自动安装完成后，即可</p>
+
+<p>说明：</p>
+
+<p>如果相关go包下载失败，则可以在<a href="https://www.golangtc.com/download/package">此下载</a></p>
+
+        </div>
+
+              <footer>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="http://gohugo.io">Hugo</a></li>
+                <li><a href="http://bootswatch.com">Bootswatch</a></li>
+                <li><a href="http://getbootstrap.com">Bootstrap</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="pull-right"><a href="#top">Back to top</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </footer>
+
+ 
+     </div>
+     
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/bootswatch.js"></script>
+    </body>
+</html>
+
+

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>polariseye</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="/css/hugo-bootswatch.css">
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">polariseye</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+           <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="sections">Sections<span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="download">
+              
+                <li><a href="/"></a></li>
+              
+                <li><a href="/text">text</a></li>
+              
+                <li><a href="/ubuntu">ubuntu</a></li>
+              
+              </ul>
+            </li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+        <h1><a href="https://polariseye.github.io/ubuntu/vim/">vim命令记录</a></h1>
+        <span class="lead">Sat, Aug 12, 2017</span>
+        <div class="post">
+            
+
+<h2 id="vim命令记录">vim命令记录</h2>
+
+<h1 id="光标控制">光标控制</h1>
+
+<ol>
+<li><p>移动到第一行第一个字符:gg</p></li>
+
+<li><p>移动到文件尾:G</p></li>
+
+<li><p>移动到当前行的行尾:$</p></li>
+
+<li><p>移动到当前行的行首:0,|均可  ^:移动到行首打首字母第一个字符</p></li>
+
+<li><p>移动到第n行:nG</p></li>
+
+<li><p>上下左右:k,j,h,l 前面加数字可以进行对应打n次操作</p></li>
+
+<li><p>ctrl+B 与ctrl+F进行翻页,也可以在前加数字，指定翻打页数</p></li>
+
+<li><p>移动光标到右边指定打x字符上:fx ，Fx则向左查找</p></li>
+
+<li><p>移动光标到右边指定的x字符前:tx  Tx则向左查找</p></li>
+
+<li><p>显示当前行号码，及文件打百分比:ctrl+g</p></li>
+
+<li><p>向后移动到单词首部:b</p></li>
+
+<li><p>向前移动到单词尾部:e</p></li>
+
+<li><p>向前移动到单词首部:w</p></li>
+</ol>
+
+<h1 id="文本编辑">文本编辑</h1>
+
+<ol>
+<li>选中文本</li>
+</ol>
+
+<p>命令模式下，移动光标到需要开始选中打地方，然后:v</p>
+
+<ol>
+<li><p>复制</p>
+
+<ul>
+<li>单行复制</li>
+</ul></li>
+</ol>
+
+<p>命令模式下，将光标移动到将要复制打行处，按&rdquo;yy&rdquo;进行复制</p>
+
+<ul>
+<li>复制当前行和后面打n行:nyy</li>
+</ul>
+
+<ol>
+<li><p>剪切</p>
+
+<ul>
+<li><p>单行剪切:dd</p></li>
+
+<li><p>剪切当前行光标所在打位置到行尾:d$</p></li>
+
+<li><p>剪切当前行光标所在打位置到行首:d^</p></li>
+
+<li><p>剪切当前行和后面几行:ndd 。n取值为1,2,3,4&hellip;.</p></li>
+
+<li><p>把n1到n2行剪切到n3行:n1,n2 m n3</p></li>
+
+<li><p>将当前行移动到第n行:mn</p></li>
+</ul></li>
+
+<li><p>粘贴</p>
+
+<ul>
+<li><p>把被剪切打文本粘贴到后面:p</p></li>
+
+<li><p>把被剪切打文本粘贴到前面:P</p></li>
+
+<li><p>把剪切内容粘贴到缓冲a中:&ldquo;add</p></li>
+
+<li><p>把缓冲区a里的内容粘贴到当前位置:&ldquo;ap</p></li>
+</ul></li>
+
+<li><p>撤销</p></li>
+</ol>
+
+<p>命令模式下：u</p>
+
+<ol>
+<li><p>删除行</p>
+
+<ul>
+<li><p>可以使用剪切命令删除行:dd</p></li>
+
+<li><p>删除n1到n2打所有行:n1,n2 de</p></li>
+
+<li><p>删除光标所在到第一行打所有数据:d1G</p></li>
+
+<li><p>删除光标所在到最后一行打所有数据:dG</p></li>
+
+<li><p>向后删除一个字符:x  nx则代表删除n个</p></li>
+
+<li><p>向前删除一个字符:X  nX则代表删除n个</p></li>
+
+<li><p>删除游标到该行行尾:d$</p></li>
+
+<li><p>删除游标到该行行首d0</p></li>
+</ul></li>
+
+<li><p>文本选中</p>
+
+<ul>
+<li><p>按字符选中:v</p></li>
+
+<li><p>按行选中:V</p></li>
+
+<li><p>按区块选中:ctrl+v</p></li>
+
+<li><p>复制选中内容:y</p></li>
+
+<li><p>删除选中内容:d</p></li>
+</ul></li>
+
+<li><p>编辑杂项</p>
+
+<ul>
+<li><p>在光标打右侧添加文本:a</p></li>
+
+<li><p>在行尾添加文本:A</p></li>
+
+<li><p>在当前行下面插入一个空行:o</p></li>
+
+<li><p>在当前行上面插入一空行:O</p></li>
+</ul></li>
+</ol>
+
+<h1 id="实践杂谈">实践杂谈</h1>
+
+<ul>
+<li>ctrl+s导致的问题</li>
+</ul>
+
+<p>由于经常使用可视化，导致习惯了ctrl+s保存文本，但在vim中，ctrl+s是停止向终端输出而已，可以使用ctrl+q解除这种状态</p>
+
+<h1 id="相关文章推荐">相关文章推荐</h1>
+
+<ul>
+<li><p><a href="http://www.cnblogs.com/tzhangofseu/archive/2011/12/17/2290955.html">vim详解</a></p></li>
+
+<li><p><a href="http://blog.csdn.net/tsuliuchao/article/details/8131537/">vim常见快捷键</a></p></li>
+</ul>
+
+        </div>
+
+              <footer>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="http://gohugo.io">Hugo</a></li>
+                <li><a href="http://bootswatch.com">Bootswatch</a></li>
+                <li><a href="http://getbootstrap.com">Bootstrap</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="pull-right"><a href="#top">Back to top</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </footer>
+
+ 
+     </div>
+     
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/bootswatch.js"></script>
+    </body>
+</html>
+
+

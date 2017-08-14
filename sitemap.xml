@@ -3,8 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://polariseye.github.io/ubuntu/vim_window/</loc>
+    <lastmod>2017-08-12T12:31:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://polariseye.github.io/ubuntu/vim/</loc>
+    <lastmod>2017-08-12T10:31:55+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://polariseye.github.io/text/unicode/</loc>
     <lastmod>2017-08-03T11:13:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://polariseye.github.io/ubuntu/jobmanage/</loc>
+    <lastmod>2017-08-03T11:13:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://polariseye.github.io/ubuntu/sysmanage/</loc>
+  </url>
+  
+  <url>
+    <loc>https://polariseye.github.io/ubuntu/vim_go/</loc>
   </url>
   
   <url>
@@ -24,8 +47,14 @@
   </url>
   
   <url>
+    <loc>https://polariseye.github.io/ubuntu/</loc>
+    <lastmod>2017-08-12T12:31:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://polariseye.github.io/</loc>
-    <lastmod>2017-08-03T11:13:55+00:00</lastmod>
+    <lastmod>2017-08-12T12:31:55+00:00</lastmod>
     <priority>0</priority>
   </url>
   

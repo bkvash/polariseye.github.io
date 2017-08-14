@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>polariseye</title>
-    <link>https://polariseye.github.io/</link>
-    <description>Recent content on polariseye</description>
+    <title>Ubuntus on polariseye</title>
+    <link>https://polariseye.github.io/ubuntu/</link>
+    <description>Recent content in Ubuntus on polariseye</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 12 Aug 2017 12:31:55 +0000</lastBuildDate>
     
-	<atom:link href="https://polariseye.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://polariseye.github.io/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -27,15 +27,6 @@
       
       <guid>https://polariseye.github.io/ubuntu/vim/</guid>
       <description>vim命令记录 光标控制 移动到第一行第一个字符:gg 移动到文件尾:G 移动到当前行的行尾:$ 移动到当前行的行首:0,|均可 ^:移动到行首打首字母</description>
-    </item>
-    
-    <item>
-      <title>unicode相关详解</title>
-      <link>https://polariseye.github.io/text/unicode/</link>
-      <pubDate>Thu, 03 Aug 2017 11:13:55 +0000</pubDate>
-      
-      <guid>https://polariseye.github.io/text/unicode/</guid>
-      <description>unicode unicode 是基于通用字符集(Universal Character Set)的标准发展。Unicode的学名是&amp;rdquo;Universal Multiple-Octet Coded Character Set&amp;rdquo</description>
     </item>
     
     <item>

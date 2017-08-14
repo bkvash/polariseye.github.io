@@ -41,13 +41,77 @@
 
 
     <div class="container">
-        
-        <div>
-            <h2><a href="https://polariseye.github.io/text/unicode/">unicode相关详解</a></h2>
-            <span class="lead">Thu, Aug 3, 2017</span>
-            <p>unicode unicode 是基于通用字符集(Universal Character Set)的标准发展。Unicode的学名是&rdquo;Universal Multiple-Octet Coded Character Set&rdquo</p>
+        <h1><a href="https://polariseye.github.io/ubuntu/sysmanage/"></a></h1>
+        <span class="lead">Mon, Jan 1, 0001</span>
+        <div class="post">
+            
+
+<h2 id="系统管理">系统管理</h2>
+
+<h1 id="环境变量配置">环境变量配置</h1>
+
+<p>环境变量配置均使用<code>export 要设置打环境变量</code></p>
+
+<p>使修改立即生效：source 配置文件名</p>
+
+<h2 id="系统环境配置">系统环境配置</h2>
+
+<p>/etc/profile: 每个用户第一次登录时，执行</p>
+
+<p>/etc/bashrc: 为每一个运行bash shell打用户执行此文件，在bash shell被打开时，执行</p>
+
+<h2 id="用户环境配置">用户环境配置</h2>
+
+<p>~/.bash_profile: 每个用户都可使用该文件输入专用于自己使用的shell信息, 当用户登录时,该文件仅仅执行一次! 默认情况下,他设置一些环境变量,执行用户的.bashrc文件.</p>
+
+<p>~/.bashrc: 该文件包含专用于你的bash shell的bash信息,当登录时以及每次打开新的shell时,该文件被读取.</p>
+
+<p>~/.bash_logout:用户登出时，执行此文件</p>
+
+<h1 id="软件管理">软件管理</h1>
+
+<ul>
+<li>下载安装软件 apt-get install &lt;软件名&gt;</li>
+<li>更新软件源列表 apt-get update</li>
+<li>更新所有软件 apt-get dist-upgrade</li>
+<li>删除软件和配置文件 apt-get &ndash;purge remove &lt;软件名&gt; 如果，要保留配置文件，则不需要&ndash;purge</li>
+</ul>
+
+<h1 id="进程管理">进程管理</h1>
+
+<h2 id="进程后台运行的几种方式">进程后台运行的几种方式</h2>
+
+<ul>
+<li>命令行后面加&rdquo;&amp;&rdquo;</li>
+</ul>
+
+<p>比如: &ldquo;rm -rf &amp;&ldquo;，作用是把当前任务放置在后台执行，可以使用命令&rdquo;jobs&rdquo;进行查看</p>
+
+<ul>
+<li>格式：(命令 &amp;)</li>
+</ul>
+
+<p>新开一个shell执行作业，所提交的作业并不在作业列表中，是无法通过jobs来查看的</p>
+
+<ul>
+<li>格式：nohup 命令&amp;</li>
+</ul>
+
+<p>忽略hangup信号，防止shell关闭时程序停掉</p>
+
+<ul>
+<li>格式：setsid 命令</li>
+</ul>
+
+<p>脱离当前shell的进程关系,放置在后台执行。</p>
+
+<ul>
+<li>格式：disown -h job名</li>
+</ul>
+
+<p>使某个正在运行打作业忽略HUP信号</p>
+
         </div>
-        
 
               <footer>
         <nav class="navbar navbar-default">
@@ -66,9 +130,9 @@
         </div>
       </footer>
 
-
-    </div>
-
+ 
+     </div>
+     
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/bootswatch.js"></script>
