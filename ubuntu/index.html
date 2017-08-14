@@ -43,6 +43,18 @@
     <div class="container">
         
         <div>
+            <h2><a href="https://polariseye.github.io/ubuntu/vim_go/">vim搭建go打开发环境</a></h2>
+            <span class="lead">Mon, Aug 14, 2017</span>
+            <p>vim搭建go打开发环境 安装go打vim插件，具体步骤如下： 安装vim插件管理工具 安装go的vim插件 安装相关具体插件 安装vim插件管理工具</p>
+        </div>
+        
+        <div>
+            <h2><a href="https://polariseye.github.io/ubuntu/sysmanage/">系统管理</a></h2>
+            <span class="lead">Mon, Aug 14, 2017</span>
+            <p>系统管理 环境变量配置 环境变量配置均使用export 要设置打环境变量 使修改立即生效：source 配置文件名 系统环境配置 /etc/profile: 每个用户第一次登录时，</p>
+        </div>
+        
+        <div>
             <h2><a href="https://polariseye.github.io/ubuntu/vim_window/">vim多文件多窗口操作</a></h2>
             <span class="lead">Sat, Aug 12, 2017</span>
             <p>vim多文件多窗口操作 同时打开多个文件 vim fl1 fl2 已经打开一个文件时，再打开一个:sp flname 多个编辑文件之间切换:ctrl+w 不关闭文件，临时切换回命</p>
@@ -55,35 +67,9 @@
         </div>
         
         <div>
-            <h2><a href="https://polariseye.github.io/ubuntu/jobmanage/">unicode相关详解</a></h2>
+            <h2><a href="https://polariseye.github.io/ubuntu/jobmanage/">任务管理</a></h2>
             <span class="lead">Thu, Aug 3, 2017</span>
             <p>ubuntu 在用命令整理 控制台管理 当前所有任务查看 jobs -l 让任务到后台执行 command+&amp; 比如：./start.sh&amp; 切换正在运行的程序到后台 如果程序正在前台运</p>
-        </div>
-        
-        <div>
-            <h2><a href="https://polariseye.github.io/ubuntu/sysmanage/"></a></h2>
-            <span class="lead">Mon, Jan 1, 0001</span>
-            <p>系统管理 环境变量配置 环境变量配置均使用export 要设置打环境变量
-使修改立即生效：source 配置文件名
-系统环境配置 /etc/profile: 每个用户第一次登录时，执行
-/etc/bashrc: 为每一个运行bash shell打用户执行此文件，在bash shell被打开时，执行
-用户环境配置 ~/.bash_profile: 每个用户都可使用该文件输入专用于自己使用的shell信息, 当用户登录时,该文件仅仅执行一次! 默认情况下,他设置一些环境变量,执行用户的.bashrc文件.
-~/.bashrc: 该文件包含专用于你的bash shell的bash信息,当登录时以及每次打开新的shell时,该文件被读取.
-~/.bash_logout:用户登出时，执行此文件
-软件管理  下载安装软件 apt-get install &lt;软件名&gt; 更新软件源列表 apt-get update 更新所有软件 apt-get dist-upgrade 删除软件和配置文件 apt-get &ndash;purge remove &lt;软件名&gt; 如果，要保留配置文件，则不需要&ndash;purge  进程管理 进程后台运行的几种方式  命令行后面加&rdquo;&amp;&rdquo;  比如: &ldquo;rm -rf &amp;&ldquo;，作用是把当前任务放置在后台执行，可以使用命令&rdquo;jobs&rdquo;进行查看
- 格式：(命令 &amp;)  新开一个shell执行作业，所提交的作业并不在作业列表中，是无法通过jobs来查看的
- 格式：nohup 命令&amp;  忽略hangup信号，防止shell关闭时程序停掉
- 格式：setsid 命令  脱离当前shell的进程关系,放置在后台执行。
- 格式：disown -h job名  使某个正在运行打作业忽略HUP信号</p>
-        </div>
-        
-        <div>
-            <h2><a href="https://polariseye.github.io/ubuntu/vim_go/"></a></h2>
-            <span class="lead">Mon, Jan 1, 0001</span>
-            <p>vim搭建go打开发环境 安装go打vim插件，具体步骤如下：
- 安装vim插件管理工具 安装go的vim插件 安装相关具体插件  安装vim插件管理工具 网上有很多vim插件管理工具，由于第一个接触到的是Vundle，所以我选则安装Vundle
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim  完成后，调整vim配置：修改~/.vim/.vimrc (如果不存在此文件，则创建)，具体增加以下内容：
-&quot; ------------- &quot; Vundle &quot; https://github.com/gmarik/Vundle.vim &quot; ------------- set nocompatible &quot; be iMproved, required filetype off &quot; required &quot; set the runtime path to include Vundle and initialize set rtp+=~/.vim/bundle/Vundle.vim call vundle#begin() &quot; alternatively, pass a path where Vundle should install plugins &quot;call vundle#begin('~/some/path/here') &quot; let Vundle manage Vundle, required Plugin 'gmarik/Vundle.vim' &quot; The following are examples of different formats supported.</p>
         </div>
         
 
