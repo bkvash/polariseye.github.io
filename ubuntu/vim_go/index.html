@@ -134,6 +134,20 @@ filetype plugin indent on    &quot; required
 
 <p>如果相关go包下载失败，则可以在<a href="https://www.golangtc.com/download/package">此下载</a></p>
 
+<h1 id="问题小计">问题小计</h1>
+
+<ul>
+<li>环境搭建完成后，使用go build进行编译时，提示，多余的尾部字符</li>
+</ul>
+
+<p>原因：</p>
+
+<p>是因为在linux中，每行打行尾部以\n结尾，windows中以\r\n结尾，而在mac中以\r结尾，这导致在linux中进行了错误打识别</p>
+
+<p>解决办法:</p>
+
+<p>:set fileformat=unix</p>
+
         </div>
 
               <footer>

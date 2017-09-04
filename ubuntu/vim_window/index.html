@@ -51,9 +51,21 @@
 <ol>
 <li><p>同时打开多个文件 vim fl1 fl2</p></li>
 
-<li><p>已经打开一个文件时，再打开一个:sp flname</p></li>
+<li><p>如果vim已经启动，在当前窗口中再打开一个文件: <code>:open file</code></p></li>
 
-<li><p>多个编辑文件之间切换:ctrl+w</p></li>
+<li><p>文件间切换</p>
+
+<ul>
+<li>Ctrl+6—下一个文件</li>
+<li>:bn—下一个文件</li>
+<li>:bp—上一个文件</li>
+</ul></li>
+
+<li><p>同时显示多个文件（窗格形式）: <code>:split</code>  <code>:vsplit</code></p></li>
+
+<li><p>多个窗格之间之间切换: <code>ctrl+w+上下左右方向键/hjkl</code></p></li>
+
+<li><p>依次向后切换到下一个窗格: <code>ctrl+ww</code></p></li>
 
 <li><p>不关闭文件，临时切换回命令行:shell，再切换回来 exit</p></li>
 </ol>
