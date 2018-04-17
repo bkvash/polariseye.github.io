@@ -51,36 +51,17 @@
 
 
     <div class="container">
-        <h1><a href="https://polariseye.github.io/ubuntu/vim_window/">vim多文件多窗口操作</a></h1>
-        <span class="lead">Sat, Aug 12, 2017</span>
-        <div class="post">
-            
-
-<h2 id="vim多文件多窗口操作">vim多文件多窗口操作</h2>
-
-<ol>
-<li><p>同时打开多个文件 vim fl1 fl2</p></li>
-
-<li><p>如果vim已经启动，在当前窗口中再打开一个文件: <code>:open file</code></p></li>
-
-<li><p>文件间切换</p>
-
-<ul>
-<li>Ctrl+6—下一个文件</li>
-<li>:bn—下一个文件</li>
-<li>:bp—上一个文件</li>
-</ul></li>
-
-<li><p>同时显示多个文件（窗格形式）: <code>:split</code>  <code>:vsplit</code></p></li>
-
-<li><p>多个窗格之间之间切换: <code>ctrl+w+上下左右方向键/hjkl</code></p></li>
-
-<li><p>依次向后切换到下一个窗格: <code>ctrl+ww</code></p></li>
-
-<li><p>不关闭文件，临时切换回命令行:shell，再切换回来 exit</p></li>
-</ol>
-
+        
+        <div>
+            <h2><a href="https://polariseye.github.io/git/git-error%E8%A7%A3%E5%86%B3/"></a></h2>
+            <span class="lead">Mon, Jan 1, 0001</span>
+            <p>git出错手动恢复记录 又是一天加班时，高高兴兴地去吃了一碗面，回来happy了，git出错了
+$ git branch fatal: Failed to resolve HEAD as a valid ref.  度娘寻他千百度，看了文章git操作错误Failed to resolve HEAD as a valid ref解决方案后，发现现象不一样，但最终还是产生了些灵感。
+首先使用fsck看看到底什么情况了
+$ git fsck error: Invalid HEAD Checking object directories: 100% (256/256), done. Checking objects: 100% (6616/6616), done. error: refs/heads/develop_tmp: invalid sha1 pointer 0000000000000000000000000000000000000000 error: bad ref for .git/logs/HEAD error: bad ref for .git/logs/refs/heads/develop_tmp error: bad signature fatal: index file corrupt  这个大概意思是出了很多错：
+ sha1值不正确，变成了0000000000000000000000000000000000000000 log日志解析有问题 index文件解析有问题  既然问题大概知道了，那咱就手动挨个恢复(我的代码分支名是:develop_tmp)</p>
         </div>
+        
 
               <footer>
         <nav class="navbar navbar-default">
@@ -99,9 +80,9 @@
         </div>
       </footer>
 
- 
-     </div>
-     
+
+    </div>
+
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/bootswatch.js"></script>

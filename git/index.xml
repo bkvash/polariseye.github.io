@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gits on polariseye</title>
+    <link>https://polariseye.github.io/git/</link>
+    <description>Recent content in Gits on polariseye</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	<atom:link href="https://polariseye.github.io/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://polariseye.github.io/git/git-error%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://polariseye.github.io/git/git-error%E8%A7%A3%E5%86%B3/</guid>
+      <description>git出错手动恢复记录 又是一天加班时，高高兴兴地去吃了一碗面，回来happy了，git出错了
+$ git branch fatal: Failed to resolve HEAD as a valid ref.  度娘寻他千百度，看了文章git操作错误Failed to resolve HEAD as a valid ref解决方案后，发现现象不一样，但最终还是产生了些灵感。
+首先使用fsck看看到底什么情况了
+$ git fsck error: Invalid HEAD Checking object directories: 100% (256/256), done. Checking objects: 100% (6616/6616), done. error: refs/heads/develop_tmp: invalid sha1 pointer 0000000000000000000000000000000000000000 error: bad ref for .git/logs/HEAD error: bad ref for .git/logs/refs/heads/develop_tmp error: bad signature fatal: index file corrupt  这个大概意思是出了很多错：
+ sha1值不正确，变成了0000000000000000000000000000000000000000 log日志解析有问题 index文件解析有问题  既然问题大概知道了，那咱就手动挨个恢复(我的代码分支名是:develop_tmp)</description>
+    </item>
+    
+  </channel>
+</rss>

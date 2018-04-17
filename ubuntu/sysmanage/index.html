@@ -28,6 +28,16 @@
               
                 <li><a href="/"></a></li>
               
+                <li><a href="/git">git</a></li>
+              
+                <li><a href="/kafka">kafka</a></li>
+              
+                <li><a href="/mysql">mysql</a></li>
+              
+                <li><a href="/protocol">protocol</a></li>
+              
+                <li><a href="/python">python</a></li>
+              
                 <li><a href="/text">text</a></li>
               
                 <li><a href="/ubuntu">ubuntu</a></li>
@@ -110,6 +120,58 @@
 </ul>
 
 <p>使某个正在运行打作业忽略HUP信号</p>
+
+<h1 id="磁盘管理">磁盘管理</h1>
+
+<ol>
+<li><p>列出当前系统中所有已挂载文件系统的类型：</p>
+
+<pre><code>sudo blkid
+</code></pre></li>
+
+<li><p>显示指定设备 UUID：</p>
+
+<pre><code>sudo blkid -s UUID /dev/sda5
+</code></pre></li>
+
+<li><p>显示所有设备 UUID：</p>
+
+<pre><code>sudo blkid -s UUID
+</code></pre></li>
+
+<li><p>显示指定设备 LABEL：</p>
+
+<pre><code>sudo blkid -s LABEL /dev/sda5
+</code></pre></li>
+
+<li><p>显示所有设备 LABEL：</p>
+
+<pre><code>sudo blkid -s LABEL
+</code></pre></li>
+
+<li><p>显示所有设备文件系统：</p>
+
+<pre><code>sudo blkid -s TYPE
+</code></pre></li>
+
+<li><p>显示所有设备：
+<code>
+sudo blkid -o device
+</code>`</p></li>
+
+<li><p>以列表方式查看详细信息：</p>
+
+<pre><code>sudo blkid -o list
+</code></pre></li>
+
+<li><p>查看当前磁盘情况</p>
+
+<pre><code>fdisk -l
+</code></pre></li>
+</ol>
+
+<p>详细参见资料:
+* <a href="https://www.cnblogs.com/mangoVic/p/7161548.html">linux 磁盘挂载及查看磁盘</a></p>
 
         </div>
 

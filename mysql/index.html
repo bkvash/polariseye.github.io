@@ -51,36 +51,18 @@
 
 
     <div class="container">
-        <h1><a href="https://polariseye.github.io/ubuntu/vim_window/">vim多文件多窗口操作</a></h1>
-        <span class="lead">Sat, Aug 12, 2017</span>
-        <div class="post">
-            
-
-<h2 id="vim多文件多窗口操作">vim多文件多窗口操作</h2>
-
-<ol>
-<li><p>同时打开多个文件 vim fl1 fl2</p></li>
-
-<li><p>如果vim已经启动，在当前窗口中再打开一个文件: <code>:open file</code></p></li>
-
-<li><p>文件间切换</p>
-
-<ul>
-<li>Ctrl+6—下一个文件</li>
-<li>:bn—下一个文件</li>
-<li>:bp—上一个文件</li>
-</ul></li>
-
-<li><p>同时显示多个文件（窗格形式）: <code>:split</code>  <code>:vsplit</code></p></li>
-
-<li><p>多个窗格之间之间切换: <code>ctrl+w+上下左右方向键/hjkl</code></p></li>
-
-<li><p>依次向后切换到下一个窗格: <code>ctrl+ww</code></p></li>
-
-<li><p>不关闭文件，临时切换回命令行:shell，再切换回来 exit</p></li>
-</ol>
-
+        
+        <div>
+            <h2><a href="https://polariseye.github.io/mysql/mysql-study/"></a></h2>
+            <span class="lead">Mon, Jan 1, 0001</span>
+            <p>mysql 重要内容整理 数据表修改 以下示例的表结构：
+CREATE TABLE `student_info` ( `Id` int(11) NOT NULL, `Name` varchar(24) DEFAULT NULL, `Sex` int(11) DEFAULT NULL, PRIMARY KEY (`Id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;   更改表名：student_info 更改为student_info2
+ALTER table student_info RENAME student_info2;  修改数据库字段类型:Sex更改为bigint
+alter table `student_info` modify `Sex` bigint null after `Name`;  字段重命名：Sex更名为Sex1,并把类型更改为bigint
+ALTER table student_info change Sex Sex1 bigint null AFTER `Name`;  添加字段
+--语法 ALTER TABLE tablename ADD [COLUMN] column_definition [FIRST | AFTER col_name] --添加默认值字段 ALTER TABLE User ADD Age INT NOT NULL DEFAULT 0; ---自增值 auto_increment  删除字段</p>
         </div>
+        
 
               <footer>
         <nav class="navbar navbar-default">
@@ -99,9 +81,9 @@
         </div>
       </footer>
 
- 
-     </div>
-     
+
+    </div>
+
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/bootswatch.js"></script>

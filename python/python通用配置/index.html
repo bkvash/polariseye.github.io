@@ -51,34 +51,24 @@
 
 
     <div class="container">
-        <h1><a href="https://polariseye.github.io/ubuntu/vim_window/">vim多文件多窗口操作</a></h1>
-        <span class="lead">Sat, Aug 12, 2017</span>
+        <h1><a href="https://polariseye.github.io/python/python%E9%80%9A%E7%94%A8%E9%85%8D%E7%BD%AE/"></a></h1>
+        <span class="lead">Mon, Jan 1, 0001</span>
         <div class="post">
             
 
-<h2 id="vim多文件多窗口操作">vim多文件多窗口操作</h2>
+<h2 id="python通用配置">python通用配置</h2>
 
-<ol>
-<li><p>同时打开多个文件 vim fl1 fl2</p></li>
+<h1 id="依赖库管理">依赖库管理</h1>
 
-<li><p>如果vim已经启动，在当前窗口中再打开一个文件: <code>:open file</code></p></li>
+<p>python 一般使用pip 进行依赖库管理</p>
 
-<li><p>文件间切换</p>
+<p>由于国内使用python会很慢，所以建议使用国内镜像，更改国内镜像的方式如下：</p>
 
 <ul>
-<li>Ctrl+6—下一个文件</li>
-<li>:bn—下一个文件</li>
-<li>:bp—上一个文件</li>
-</ul></li>
-
-<li><p>同时显示多个文件（窗格形式）: <code>:split</code>  <code>:vsplit</code></p></li>
-
-<li><p>多个窗格之间之间切换: <code>ctrl+w+上下左右方向键/hjkl</code></p></li>
-
-<li><p>依次向后切换到下一个窗格: <code>ctrl+ww</code></p></li>
-
-<li><p>不关闭文件，临时切换回命令行:shell，再切换回来 exit</p></li>
-</ol>
+<li>Unix:$HOME/.config/pip/pip.conf</li>
+<li>Mac: $HOME/Library/Application Support/pip/pip.conf</li>
+<li>Windows：%APPDATA%\pip\pip.ini，%APPDATA%的实际路径我电脑上是C:\Users\user_xxx\AppData\Roaming，可在cmd里执行echo %APPDATA%命令查看</li>
+</ul>
 
         </div>
 

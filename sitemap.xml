@@ -33,7 +33,56 @@
   </url>
   
   <url>
+    <loc>https://polariseye.github.io/git/git-error%E8%A7%A3%E5%86%B3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://polariseye.github.io/kafka/kafka/</loc>
+  </url>
+  
+  <url>
+    <loc>https://polariseye.github.io/mysql/mysql-study/</loc>
+  </url>
+  
+  <url>
+    <loc>https://polariseye.github.io/protocol/protoc-use/</loc>
+  </url>
+  
+  <url>
+    <loc>https://polariseye.github.io/python/python%E7%89%88%E6%9C%AC%E5%85%B1%E5%AD%98/</loc>
+  </url>
+  
+  <url>
+    <loc>https://polariseye.github.io/python/python%E9%80%9A%E7%94%A8%E9%85%8D%E7%BD%AE/</loc>
+  </url>
+  
+  <url>
     <loc>https://polariseye.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://polariseye.github.io/git/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://polariseye.github.io/kafka/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://polariseye.github.io/mysql/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://polariseye.github.io/protocol/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://polariseye.github.io/python/</loc>
     <priority>0</priority>
   </url>
   

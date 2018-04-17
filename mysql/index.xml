@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mysqls on polariseye</title>
+    <link>https://polariseye.github.io/mysql/</link>
+    <description>Recent content in Mysqls on polariseye</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	<atom:link href="https://polariseye.github.io/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://polariseye.github.io/mysql/mysql-study/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://polariseye.github.io/mysql/mysql-study/</guid>
+      <description>mysql 重要内容整理 数据表修改 以下示例的表结构：
+CREATE TABLE `student_info` ( `Id` int(11) NOT NULL, `Name` varchar(24) DEFAULT NULL, `Sex` int(11) DEFAULT NULL, PRIMARY KEY (`Id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;   更改表名：student_info 更改为student_info2
+ALTER table student_info RENAME student_info2;  修改数据库字段类型:Sex更改为bigint
+alter table `student_info` modify `Sex` bigint null after `Name`;  字段重命名：Sex更名为Sex1,并把类型更改为bigint
+ALTER table student_info change Sex Sex1 bigint null AFTER `Name`;  添加字段
+--语法 ALTER TABLE tablename ADD [COLUMN] column_definition [FIRST | AFTER col_name] --添加默认值字段 ALTER TABLE User ADD Age INT NOT NULL DEFAULT 0; ---自增值 auto_increment  删除字段</description>
+    </item>
+    
+  </channel>
+</rss>

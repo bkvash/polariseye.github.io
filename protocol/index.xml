@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Protocols on polariseye</title>
+    <link>https://polariseye.github.io/protocol/</link>
+    <description>Recent content in Protocols on polariseye</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	<atom:link href="https://polariseye.github.io/protocol/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://polariseye.github.io/protocol/protoc-use/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://polariseye.github.io/protocol/protoc-use/</guid>
+      <description> protocol buffer教程 protocol buffer安装及使用  安装protocol buffer代码生成工具:点击下载（直接下载可执行程序即可），把可执行程序放置在系统path目录中，以便通过命令protoc使用
+ protocol buffer生成golang代码需要安装对应的golang插件，把可执行程序放置在系统的path目录中即可。点击下载,推荐使用其中的插件protoc-gen-gofast
+ protoc-gen-gofast生成的代码需要依赖对应protocol buffer的库protobuf，点击下载
+ 使用命令 protoc &amp;ndash;gofast_out=. myproto.proto 生成代码
+  参考文档：
+ 在 Golang 中使用 Protobuf  protocol buffer语法 以下只针对protobuf3进行使用介绍
+参考文档：
+ Protobuf3语言指南  protocol buffer内部原理 参考文档:
+ Google Protocol Buffer 的使用和原理  </description>
+    </item>
+    
+  </channel>
+</rss>

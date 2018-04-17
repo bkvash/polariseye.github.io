@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>polariseye</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="/css/hugo-bootswatch.css">
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">polariseye</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+           <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="sections">Sections<span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="download">
+              
+                <li><a href="/"></a></li>
+              
+                <li><a href="/git">git</a></li>
+              
+                <li><a href="/kafka">kafka</a></li>
+              
+                <li><a href="/mysql">mysql</a></li>
+              
+                <li><a href="/protocol">protocol</a></li>
+              
+                <li><a href="/python">python</a></li>
+              
+                <li><a href="/text">text</a></li>
+              
+                <li><a href="/ubuntu">ubuntu</a></li>
+              
+              </ul>
+            </li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+        <h1><a href="https://polariseye.github.io/git/git-error%E8%A7%A3%E5%86%B3/"></a></h1>
+        <span class="lead">Mon, Jan 1, 0001</span>
+        <div class="post">
+            
+
+<h2 id="git出错手动恢复记录">git出错手动恢复记录</h2>
+
+<p>又是一天加班时，高高兴兴地去吃了一碗面，回来happy了，git出错了</p>
+
+<pre><code>$ git branch
+fatal: Failed to resolve HEAD as a valid ref.
+</code></pre>
+
+<p>度娘寻他千百度，看了文章<a href="https://blog.csdn.net/ii_bat/article/details/61192230">git操作错误Failed to resolve HEAD as a valid ref解决方案</a>后，发现现象不一样，但最终还是产生了些灵感。</p>
+
+<p>首先使用fsck看看到底什么情况了</p>
+
+<pre><code class="language-bash">$ git fsck
+error: Invalid HEAD
+Checking object directories: 100% (256/256), done.
+Checking objects: 100% (6616/6616), done.
+error: refs/heads/develop_tmp: invalid sha1 pointer 0000000000000000000000000000000000000000
+error: bad ref for .git/logs/HEAD
+error: bad ref for .git/logs/refs/heads/develop_tmp
+error: bad signature
+fatal: index file corrupt
+</code></pre>
+
+<p>这个大概意思是出了很多错：</p>
+
+<ol>
+<li>sha1值不正确，变成了0000000000000000000000000000000000000000</li>
+<li>log日志解析有问题</li>
+<li>index文件解析有问题</li>
+</ol>
+
+<p>既然问题大概知道了，那咱就手动挨个恢复(我的代码分支名是:develop_tmp)</p>
+
+<ol>
+<li>打开文件./git/refs/heads/develop_tmp 发现是乱码~~~，说明这儿有问题的，正常情况下应该是一个sha1的字符串.先把其他分支的sha1值填充到这个文件</li>
+<li>现在咱git log看看，哇哦！有东西了，但发现最近的提交信息不见了， 但git reflog 还有保存最近的提交日志。于是咱就checkout吧，此时错误信息如下:
+<code>bash
+$ git checkout  HEAD@{0}
+warning: Log for ref HEAD unexpectedly ended on Mon, 9 Apr 2018 18:31:49 +0800.
+error: bad signature
+fatal: index file corrupt
+</code>
+大意也就是说索引文件出错了，打开文件 <em>.git/index</em> ，发现内容如下(全是0值的字节)
+<code>
+NULNULNULNULNULNULNULNULNULNULNULNULNULNULNULNUL......
+</code></li>
+<li>ok这个没啥，根据参考的两篇文章大概知道，git是可以自己恢复索引的，于是把文件<em>.git/index</em> 删掉，然后再执行 <em>git reset</em> ，ok了，所有指令都能正常了</li>
+<li>趁着高兴劲儿，我又挨个查看了.git目录的所有文件，发现文件 <em>.git/logs/refs/heads/develop_tmp</em> 的最后面仍然是可恶的
+<code>
+NULNULNULNULNULNULNULNULNULNULNULNULNULNULNULNUL......
+</code>
+到此位置整个git就愉快地正常了。</li>
+</ol>
+
+<h1 id="总结">总结</h1>
+
+<ol>
+<li>git目录的内容挺有意思的，除了index文件外，其他的都是文本文件，所以出了错，其实可以手动更改这些文本文件以恢复正常</li>
+<li>.git\logs\refs\heads目录:存储了各个分支的提交日志信息</li>
+<li>.git\refs\heads目录：存储了各个分支当前的版本号ID</li>
+<li>.git\HEAD文件:存储了当前在编辑的分支名</li>
+<li>分支检查指令: git fsck</li>
+<li>重建索引指令：git reset</li>
+</ol>
+
+<h1 id="参考资料">参考资料</h1>
+
+<ul>
+<li><a href="https://blog.csdn.net/ii_bat/article/details/61192230">git操作错误Failed to resolve HEAD as a valid ref解决方案</a></li>
+<li><a href="https://stackoverflow.com/questions/11706215/how-to-fix-git-error-object-file-is-empty">how to fix GIT error: object file is empty?
+</a></li>
+</ul>
+
+        </div>
+
+              <footer>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="http://gohugo.io">Hugo</a></li>
+                <li><a href="http://bootswatch.com">Bootswatch</a></li>
+                <li><a href="http://getbootstrap.com">Bootstrap</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="pull-right"><a href="#top">Back to top</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </footer>
+
+ 
+     </div>
+     
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/bootswatch.js"></script>
+    </body>
+</html>
+
+
